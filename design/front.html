@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>THE WORLD TODAY — Saturday, November 21, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1024px; height: 1024px; overflow: hidden; }
+  body {
+    background: #f4efe4;
+    color: #141414;
+    font-family: Georgia, "Times New Roman", serif;
+    padding: 22px 26px 18px;
+    display: flex; flex-direction: column;
+  }
+  .sans { font-family: Bahnschrift, "Arial Narrow", Arial, sans-serif; }
+
+  /* ---------- masthead ---------- */
+  .mast { text-align: center; border-bottom: 5px double #141414; padding-bottom: 6px; }
+  .mast h1 {
+    font-family: Georgia, serif; font-weight: 700;
+    font-size: 78px; line-height: 0.95; letter-spacing: 2px;
+  }
+  .dateline {
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 2px solid #141414; margin-top: 8px; padding-top: 6px;
+    font-family: Bahnschrift, Arial, sans-serif; font-weight: 700;
+    font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;
+  }
+  .dateline .date { font-size: 30px; letter-spacing: 1px; }
+
+  /* ---------- lead story ---------- */
+  .lead {
+    margin-top: 12px; background: #141414; color: #fff;
+    padding: 14px 18px 14px; position: relative;
+  }
+  .kicker {
+    display: inline-block; font-family: Bahnschrift, Arial, sans-serif; font-weight: 700;
+    font-size: 15px; letter-spacing: 2px; text-transform: uppercase;
+    padding: 3px 8px; color: #fff; background: #b3121b;
+  }
+  .lead h2 {
+    font-family: Impact, "Arial Narrow Bold", sans-serif; font-weight: 400;
+    font-size: 72px; line-height: 1; letter-spacing: 1px; margin-top: 6px;
+  }
+  .stats { display: flex; gap: 12px; margin-top: 10px; }
+  .stat {
+    flex: 1; background: #b3121b; padding: 6px 10px 8px; text-align: center;
+  }
+  .stat b {
+    display: block; font-family: Impact, sans-serif; font-weight: 400;
+    font-size: 64px; line-height: 1;
+  }
+  .stat span {
+    font-family: Bahnschrift, Arial, sans-serif; font-weight: 700;
+    font-size: 19px; letter-spacing: 1.5px; text-transform: uppercase;
+  }
+  .lead .deck {
+    margin-top: 10px; font-size: 22px; line-height: 1.25;
+  }
+  .lead .deck strong { color: #ffd23f; }
+
+  /* ---------- story grid ---------- */
+  .grid {
+    flex: 1; margin-top: 12px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr;
+    gap: 0; border-top: 3px solid #141414;
+  }
+  .story {
+    padding: 10px 12px 8px; border-right: 1px solid #141414; border-bottom: 1px solid #141414;
+    display: flex; flex-direction: column;
+  }
+  .story:nth-child(3n) { border-right: none; }
+  .story:nth-child(n+4) { border-bottom: none; }
+  .story .kicker { align-self: flex-start; font-size: 13px; padding: 2px 6px; }
+  .story h3 {
+    font-family: Impact, sans-serif; font-weight: 400;
+    font-size: 34px; line-height: 1.02; margin-top: 6px;
+  }
+  .big {
+    font-family: Impact, sans-serif; font-size: 66px; line-height: 1; margin-top: 4px;
+  }
+  .story p { font-size: 17px; line-height: 1.22; margin-top: 4px; }
+  .k-mkt { background: #0b5d3b; } .c-mkt { color: #0b5d3b; }
+  .k-law { background: #4a2a7a; } .c-law { color: #4a2a7a; }
+  .k-dip { background: #1f4e8c; } .c-dip { color: #1f4e8c; }
+  .k-me  { background: #a85a00; } .c-me  { color: #a85a00; }
+  .k-sci { background: #00747a; } .c-sci { color: #00747a; }
+
+  /* the sixth cell: index of the day */
+  .index { background: #141414; color: #f4efe4; }
+  .index h3 { color: #fff; font-size: 26px; }
+  .index ol { list-style: none; margin-top: 6px; }
+  .index li {
+    font-family: Bahnschrift, Arial, sans-serif; font-weight: 700; font-size: 16px;
+    line-height: 1.2; padding: 4px 0; border-bottom: 1px solid #555;
+  }
+  .index li:last-child { border-bottom: none; }
+  .index li i { font-style: normal; color: #ffd23f; }
+
+  .foot {
+    margin-top: 6px; border-top: 2px solid #141414; padding-top: 4px; text-align: center;
+    font-family: Bahnschrift, Arial, sans-serif; font-weight: 700;
+    font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <h1>THE WORLD TODAY</h1>
+  <div class="dateline">
+    <span>World news · one page</span>
+    <span class="date">Saturday, November 21, 2026</span>
+    <span>Six top stories</span>
+  </div>
+</header>
+
+<section class="lead">
+  <span class="kicker">Ukraine · Poland — War</span>
+  <h2>RUSSIA'S BIGGEST BARRAGE</h2>
+  <div class="stats">
+    <div class="stat"><b>400+</b><span>drones</span></div>
+    <div class="stat"><b>110+</b><span>missiles</span></div>
+    <div class="stat"><b>8+</b><span>killed in Kyiv</span></div>
+  </div>
+  <p class="deck">Drones and missiles strike Ukraine overnight; at least 8 killed in Kyiv. <strong>Missiles land in Poland</strong> — Warsaw calls it a deliberate provocation.</p>
+</section>
+
+<section class="grid">
+  <article class="story">
+    <span class="kicker k-mkt">Markets · USA</span>
+    <h3>AI SELL-OFF</h3>
+    <div class="big c-mkt">S&amp;P −3.7%</div>
+    <p>S&amp;P 500 falls into correction as chip stocks slide.</p>
+  </article>
+
+  <article class="story">
+    <span class="kicker k-law">Justice · Asia</span>
+    <h3>WORLD COURT RULES: GENOCIDE</h3>
+    <div class="big c-law" style="font-size:52px">MYANMAR</div>
+    <p>ICJ finds <b>Myanmar responsible for genocide</b> against the Rohingya — a first in the court's history.</p>
+  </article>
+
+  <article class="story">
+    <span class="kicker k-dip">Diplomacy · China</span>
+    <h3>THREE LEADERS, ONE TABLE</h3>
+    <div class="big c-dip" style="font-size:33px;white-space:nowrap">US · CHINA · RUSSIA</div>
+    <p>Trump, Xi and Putin hold the first US–China–Russia summit, in Shenzhen.</p>
+  </article>
+
+  <article class="story">
+    <span class="kicker k-me">Middle East · Iran</span>
+    <h3>“WE'VE GOT TIME”</h3>
+    <div class="big c-me">→ 2027</div>
+    <p>Trump signals the Iran war will run into 2027 as Hormuz attacks continue.</p>
+  </article>
+
+  <article class="story">
+    <span class="kicker k-sci">Health · Science</span>
+    <h3>A PILL VS. PANCREATIC CANCER</h3>
+    <div class="big c-sci">1 in 12</div>
+    <p>Trial drug makes tumors undetectable in 1 in 12 patients.</p>
+  </article>
+
+  <article class="story index">
+    <h3>THE DAY IN SIX</h3>
+    <ol>
+      <li><i>1</i> Russia's biggest barrage; missiles hit Poland</li>
+      <li><i>2</i> S&amp;P 500 −3.7%, into correction</li>
+      <li><i>3</i> ICJ: Myanmar responsible for genocide</li>
+      <li><i>4</i> Trump–Xi–Putin summit, Shenzhen</li>
+      <li><i>5</i> Iran war “into 2027”</li>
+      <li><i>6</i> Pancreatic cancer pill trial</li>
+    </ol>
+  </article>
+</section>
+
+<footer class="foot">The World Today · Saturday, November 21, 2026 · Europe · Americas · Asia · Middle East · Science</footer>
+
+</body>
+</html>
